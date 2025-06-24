@@ -1,0 +1,106 @@
+[
+    {
+    "id":1,
+    "title":"IFS Infor Federated Services",
+    "time":"Time Estimation: 20 Minutes",
+    "level":"Level 1",
+    "cardDescription":"This challenge is to manually maintain Cloud Identity user accounts and security roles",
+    "cardSubDescription":"x% of community members have completed this challenge",
+    "challengeTitle":"Cloud Identity User Management",
+    "challengeDescription":"This challenge is to manually add a Cloud Identity Users and then, using the export-import option, create and modify security roles and user assignments along the way. This process can be used to manage users before a SCIM (System for Cross-domain Identity Management) or the recommended best practices setup is performed.",
+    "requirements":"IFS Admin Roles: IFSApplicationAdmin, Infor-SystemAdministrator, PortalContentAdministrator, UserAdmin",
+    "productName":"IFS",
+    "difficultyLevel":"Difficulty Level",
+    "footer1":"X% of people in the community have completed this challenge",
+    "footer2":"You have earned this badge already! You can attempt again…",
+    "steps":[
+        {
+        "steps":"1.Click the + button to manually add a new cloud identity user. Fill in the First Name, Last Name, User Name & Email Address fields, and unselect the Send Invitation option. Note: This option is used if you are sending an email invitation for a user to complete their setup.",
+        "screenshot":"/assets/Images/Picture1-ch1.png"
+        },
+        {
+         "steps":"2. In the search field, input the username you just created, click Enter, and then click on User details. ",
+         "screenshot":"/assets/Images/Picture2-ch1.png"
+        },
+        {
+         "steps":"3. Click on the Security Roles tab and click the + Button. Search for and assign the new user these two security roles.",
+         "screenshot":"/assets/Images/Picture3-ch1.png"
+        },
+        {
+         "steps":"4. Click Save.",
+         "screenshot":"/assets/Images/Picture4-ch1.png"
+        },
+        {
+         "steps":"5. Using the export/import option, create a new user from the previously manually created User. Go back to the Users' main page and select the newly manually created user (Note: You may have to search for the user). Then click the export button.",
+         "screenshot":""
+        },
+        {
+         "steps":"6. Select CSV format and click Export.",
+         "screenshot":"/assets/Images/Picture6-ch1.png"
+        }
+    ]
+ },
+    {
+    "id":2,
+    "title":"Challenge 2",
+    "time":"40mins",
+    "level":"Level 1",
+    "cardDescription":"Description text- describe the challenge in few words",
+    "challengeDescription":"Challenge 1 Description",
+    "productName":"Product Name",
+    "difficultyLevel":"Difficulty Level",
+    "timeEstimation":"Time Estimation",
+    "steps":[
+        {
+        "steps":"1.Step one",
+        "screenshot":"/assets/images/step1.png"
+        },
+        {
+         "steps":"1.Step one",
+         "screenshot":"/assets/images/step1.png"
+        }
+    ]
+ },
+    {
+    "id":3,
+    "title":"Challenge 3",
+    "time":"40mins",
+    "level":"Level 1",
+    "cardDescription":"Description text- describe the challenge in few words",
+    "challengeDescription":"Challenge 1 Description",
+    "productName":"Product Name",
+    "difficultyLevel":"Difficulty Level",
+    "timeEstimation":"Time Estimation",
+    "steps":[
+        {
+        "steps":"1.Step one",
+        "screenshot":"/assets/images/step1.png"
+        },
+        {
+         "steps":"1.Step one",
+         "screenshot":"/assets/images/step1.png"
+        }
+    ]
+ },
+    {
+    "id":4,
+    "title":"Challenge 4",
+    "time":"40mins",
+    "level":"Level 1",
+   "cardDescription":"Description text- describe the challenge in few words",
+    "challengeDescription":"Challenge 1 Description",
+    "productName":"Product Name",
+    "difficultyLevel":"Difficulty Level",
+    "timeEstimation":"Time Estimation",
+    "steps":[
+        {
+        "steps":"1.Step one",
+        "screenshot":"/assets/images/step1.png"
+        },
+        {
+         "steps":"1.Step one",
+         "screenshot":"/assets/images/step1.png"
+        }
+    ]
+ }
+]

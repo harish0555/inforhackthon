@@ -1,0 +1,505 @@
+@use "../../utilities/variables.scss" as * ;
+
+ /* Validation Page Styles */
+        .validation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: $x-margin;
+        }
+
+
+        .headline-01 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 3rem;
+            color: $infor-charcoal;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+        
+        .headline-02 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: $infor-charcoal;
+            text-align: left;
+            margin-bottom: 0.75rem;
+        }
+
+        .submit-header{
+            color: $white; 
+            margin-bottom: 0.5rem;
+        }
+        
+        .subhead {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: $infor-charcoal;
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
+        .validation-info-header{
+            color: $infor-charcoal;
+            margin-bottom: 0.75rem;
+        }
+        .validation-info-text{
+            color: $infor-gray-shade-02; 
+            font-size: 0.9rem;
+        }
+        
+        .body-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: $infor-gray-shade-02;
+            text-align: left;
+            line-height: 1.6;
+        }
+        
+        .validation-header {
+            background: $infor-red;
+            color: $white;
+            padding: 2rem;
+            margin: calc(-1 * $x-margin) calc(-1 * $x-margin) 2rem calc(-1 * $x-margin);
+            text-align: center;
+        }
+        
+        .validation-section {
+            background: $infor-gray-tint-01;
+            padding: 2rem;
+            border-radius: $y-radius;
+            margin-bottom: 2rem;
+        }
+        
+        .validation-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid $infor-gray;
+            padding-bottom: 1rem;
+        }
+        
+        .validation-tab {
+            background: $infor-gray-shade-01;
+            color: $infor-charcoal;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: $y-radius;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .validation-tab:hover {
+            background: $infor-gray-shade-02;
+            color: $white;
+        }
+        
+        .validation-tab.active {
+            background: $infor-red;
+            color: $white;
+            transform: translateY(-2px);
+        }
+        
+        .validation-method {
+            display: block;
+        }
+        
+        // .validation-method.active {
+        //     display: block;
+        // }
+        
+        .validation-input {
+            // width: 100%;
+            width: 92%;
+            padding: 1rem;
+            border: 2px solid $infor-gray-shade-01;
+            border-radius: $y-radius;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            margin: 1rem 0;
+            transition: border-color 0.3s ease;
+        }
+        
+        .validation-input:focus {
+            border-color: $infor-red;
+            outline: none;
+        }
+        
+        .validation-info {
+            background: #E8F4F8;
+            padding: 1.5rem;
+            border-radius: $y-radius;
+            margin: 1.5rem 0;
+            border-left: 4px solid $infor-purple;
+        }
+        
+        .validate-btn {
+            background: $infor-green;
+            color: $white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: $y-radius;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .validate-btn:hover {
+            background: #00a049;
+            transform: translateY(-2px);
+        }
+        
+        /* File Upload Styles */
+        .file-upload-area {
+            border: 2px dashed $infor-gray-shade-01;
+            border-radius: $y-radius;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+            background: $white;
+        }
+        
+        .file-upload-area:hover {
+            border-color: $infor-red;
+            background: rgba(237, 12, 12, 0.05);
+        }
+        
+        .file-upload-area.drag-over {
+            border-color: $infor-red;
+            background: rgba(237, 12, 12, 0.1);
+            transform: scale(1.02);
+        }
+        
+        .file-upload-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .file-upload-icon {
+            font-size: 3rem;
+            color: $infor-gray-shade-02;
+        }
+        .file-upload-subhead{
+            color: var(--infor-charcoal); 
+            margin-bottom: 0.5rem;
+        }
+        .file-upload-bodytxt{
+                font-size: 0.875rem;
+                 color: var(--infor-gray-shade-02);
+        }
+        
+        .file-selected {
+            background: $white;
+            border: 2px solid $infor-green;
+            border-radius: $y-radius;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .file-icon {
+            font-size: 2rem;
+            color: $infor-green;
+        }
+        
+        .file-details {
+            flex: 1;
+        }
+        
+        .file-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: $infor-charcoal;
+            margin-bottom: 0.25rem;
+        }
+        
+        .file-size {
+            font-size: 0.875rem;
+            color: $infor-gray-shade-02;
+        }
+        
+        .file-remove {
+            background: $infor-red;
+            color: $white;
+            border: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .file-remove:hover {
+            background: $infor-red-shade-01;
+            transform: scale(1.1);
+        }
+        
+        /* API Validation Styles */
+        .api-details {
+            background: $white;
+            padding: 1rem;
+            border-radius: $y-radius;
+            margin: 1rem 0;
+            border-left: 3px solid $infor-purple;
+        }
+        
+        .api-details > div {
+            margin-bottom: 0.75rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9rem;
+            color: $infor-charcoal;
+        }
+        
+        .api-details > div:last-child {
+            margin-bottom: 0;
+        }
+        
+        .api-details code {
+            background: $infor-gray-tint-01;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: $infor-purple;
+        }
+        
+        .api-help {
+            background: $white;
+            padding: 1.5rem;
+            border-radius: $y-radius;
+            margin: 1.5rem 0;
+            border-left: 3px solid $infor-green;
+        }
+        .api-help-bodyText{
+             font-size: 0.875rem; 
+             color: $infor-gray-shade-02; 
+             margin-top: 0.75rem;
+        }
+        
+        .code-block {
+            background: $infor-charcoal;
+            color: $white;
+            padding: 1rem;
+            border-radius: $y-radius;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .pro-tip {
+    background: #FFF3CD;
+    border: 1px solid $infor-yellow;
+    padding: 1.5rem;
+    border-radius: $y-radius;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.pro-tip-title {
+    color: #856404;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    // margin-bottom: 0.5rem;
+}
+
+.pro-tip p {
+    color: #856404;
+    margin: 0;
+    margin-top: 0.5rem !important
+}
+
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        
+        .modal-content {
+            background: $white;
+            // padding: 0rem !important;
+            padding: 1rem 3rem;
+            border-radius: $y-radius;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            // max-height: 90vh;
+            // overflow:hidden;
+            // overflow: auto;
+        }
+        // .modal-content-1{
+        //     overflow-y: auto;
+        //    height: calc(90vh - 20px);
+        //    padding: 1rem 3rem;
+        //    border-radius: inherit;
+        // }
+
+        .modal-content-1::-webkit-scrollbar{
+            width: 6px;
+            border-radius: $y-radius;
+        }
+        .modal-content-1::-webkit-scrollbar-track{
+            background: transparent;
+            border-radius: $y-radius;
+        }
+        .modal-content-1::-webkit-scrollbar-thumb{
+            background-color: rgba(0,0,0, 0.3);
+            border-radius: $y-radius;  
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: $infor-gray-shade-02;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .modal-close:hover {
+            color: $infor-charcoal;
+        }
+        
+        .modal-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .success-icon { color: $infor-green; }
+        .failure-icon { color: $infor-red; }
+        .warning-icon { color: $infor-yellow; }
+        
+        .modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: $infor-charcoal;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-message {
+            color: $infor-gray-shade-02;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .badge-earned {
+            background: $infor-red;
+            color: $white;
+            padding: 1.5rem;
+            border-radius: $y-radius;
+            margin: 1.5rem 0;
+        }
+        
+        .badge-earned h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .modal-points{
+            background: #FFF3CD;
+            padding: 1.5rem;
+            border-radius: $y-radius;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        .modal-points-header{
+            color: #856404;
+            margin-bottom: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            :root {
+                --x-margin: 1rem;
+            }
+            
+            .headline-01 {
+                font-size: 2rem;
+            }
+            
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .tutorial-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .timer-display {
+                font-size: 1.5rem;
+            }
+            
+            .tutorial-actions,
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .step-header {
+                align-items: flex-start;
+            }
+            
+            .badge-row {
+                flex-direction: column;
+            }
+            
+            .validation-tabs {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }

@@ -1,0 +1,297 @@
+@use "../../utilities/variables.scss" as *;
+
+.tutorial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.tutorial-header {
+    background: $infor-red;
+    color: $white;
+    padding: 2rem $x-margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.timer-display {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.tutorial-content {
+    padding: 2rem $x-margin;
+}
+
+.step-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $infor-gray;
+}
+
+.step-section:last-child {
+    border-bottom: none;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    background: $infor-red;
+    color: $white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.step-actions {
+    background: $infor-gray-tint-01;
+    padding: 1.5rem;
+    border-radius: $y-radius;
+    margin: 1.5rem 0;
+    // border-left: 4px solid $infor-green;
+    text-align: left;
+}
+
+.step-actions h4 {
+    color: $infor-charcoal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.step-actions ul {
+    list-style: none;
+    padding-left: 0;
+}
+.step-actions ol {
+    // list-style: none;
+    padding-left: 18px;
+}
+
+.step-actions li {
+    margin-bottom: 0.5rem;
+    color: $infor-gray-shade-02;
+}
+
+
+.step-actions li:before {
+    content: "• ";
+    // color: $infor-green;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.step-actions li.bullet-list:before{
+     content: "• ";
+}
+.step-actions li.numeric-list:before{
+     content: "";
+}
+
+.step-actions li.red:before {
+    color:$infor-red
+}
+.step-actions li.purple:before {
+    color:$infor-purple
+}
+.step-actions li.yellow:before {
+    color:$infor-red
+}
+.step-actions li.green:before {
+    color:$infor-green
+}
+
+.step-actions .sub-list{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.screenshot-placeholder {
+    background: $infor-gray-shade-01;
+    height: 300px;
+    border-radius: $y-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    border: 2px dashed $infor-gray-shade-02;
+    color: $infor-gray-shade-02;
+}
+
+.screenshot-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.screenshot-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tutorial-actions {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid $infor-gray;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.secondary-btn {
+    background: $infor-gray-shade-02;
+    color: $white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: $y-radius;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: $infor-charcoal;
+    transform: translateY(-2px);
+}
+
+.pro-tip {
+    background: #FFF3CD;
+    border: 1px solid $infor-yellow;
+    padding: 1.5rem;
+    border-radius: $y-radius;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.pro-tip-title {
+    color: #856404;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    // margin-bottom: 0.5rem;
+}
+
+.pro-tip p {
+    color: #856404;
+    margin: 0;
+    margin-top: 0.5rem !important
+}
+
+ /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            // display: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            // padding: $x-margin;
+        }
+        
+        // .modal-content {
+           
+        // }
+
+        .cancel-modal-content{
+            //  background: $white;
+            padding: 3rem !important;
+            border-radius: $y-radius;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: #FFF3CD !important;
+             border: 2px solid $infor-yellow;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: $infor-gray-shade-02;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .modal-close:hover {
+            color: $infor-charcoal;
+        }
+        
+        .modal-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        .modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: $infor-charcoal;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-message {
+            color: $infor-gray-shade-02;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .primary-btn {
+            background: $infor-red;
+            color: $white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: $y-radius;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .primary-btn:hover {
+            background: $infor-red-shade-01;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(237, 12, 12, 0.4);
+        }

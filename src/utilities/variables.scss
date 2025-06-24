@@ -1,0 +1,19 @@
+ $infor-red: #ED0C0C;
+$infor-red-shade-01: #D5000E;
+$infor-red-shade-02: #720000;
+$infor-charcoal: #15262E;
+$infor-gray: #DEE0E2;
+$infor-gray-shade-01: #C6CBCC;
+$infor-gray-shade-02: #747777;
+$infor-gray-tint-01: #F2F3F4;
+$infor-gray-tint-02: #DEE0E2;
+$infor-purple: #460DAF;
+$infor-green: #00BD58;
+$infor-yellow: #FFAC00;
+$white: #FFFFFF;
+$x-margin: 5vw;
+$y-radius: #{calc(($x-margin) / 2)};
+
+body{
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+}

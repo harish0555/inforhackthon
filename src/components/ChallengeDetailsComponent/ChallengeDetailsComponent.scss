@@ -1,0 +1,136 @@
+@use '../../utilities/variables.scss' as *;
+
+
+
+.detail-container {
+    padding: $x-margin;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+        
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $infor-gray;
+}
+
+.back-btn {
+    background: $infor-gray-shade-02;
+    color: $white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: $y-radius;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: $infor-charcoal;
+    transform: translateY(-2px);
+}
+
+.start-btn, .primary-btn {
+    background: $infor-red;
+    color: $white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: $y-radius;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover, .primary-btn:hover {
+    background: $infor-red-shade-01;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(237, 12, 12, 0.4);
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.badge-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-badge {
+    background: $infor-green;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: $y-radius;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.sidebar {
+    background: $infor-gray-tint-01;
+    padding: 2rem;
+    border-radius: $y-radius;
+    height: fit-content;
+}
+
+.requirements-list {
+    list-style: none;
+    margin-top: 1rem;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.requirements-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $infor-gray-shade-01;
+    color: $infor-gray-shade-02;
+}
+
+.requirements-list li:last-child {
+    border-bottom: none;
+}
+
+.completion-stats {
+    background: $white;
+    padding: 1.5rem;
+    border-radius: $y-radius;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.completion-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $infor-red;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pro-tip {
+    background: #FFF3CD;
+    border: 1px solid $infor-yellow;
+    padding: 1.5rem;
+    border-radius: $y-radius;
+    margin-top: 1.5rem;
+}
+
+.pro-tip-title {
+    color: #856404;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pro-tip p {
+    color: #856404;
+    margin: 0;
+}
