@@ -21,7 +21,11 @@ const ValidationComponent = () => {
 
   }
   const validateSolution = () => {
-    setIsValidated(true)
+    window.parent.postMessage({ type: 'scrollTocenter' }, 'https://community-staging.developer.infor.com');
+   setTimeout(() =>{
+        setIsValidated(true)
+   },100)
+   
   }
   const backToTutorial = () =>{
     setTimeRunning(false);

@@ -14,17 +14,12 @@ const TutorialComponent = () => {
     const challenge = challenges.find((data) => data.id === parseInt(id));
 
     const showCancelModal = () => {
-        setCancelModal(true);
-        window.parent.postMessage({ type: 'scrollToTop' }, '*');
+       
+        window.parent.postMessage({ type: 'scrollToTop' }, 'https://community-staging.developer.infor.com');
+        setTimeout(()=>{
+            setCancelModal(true);
+        },200)
 
-        // setTimeout(() => {
-        //     window.scrollTo({ top:0 ,behavior: 'smooth' })
-        // //     if (modalRef.current) {
-        // //         modalRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // //         console.log(modalRef,"reffff")
-        // //     }
-        // }, 100);
-        // console.log(cancelModal, "cancelModallll")
     }
 
     const handleCancelModal = () => {

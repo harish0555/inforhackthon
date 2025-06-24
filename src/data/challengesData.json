@@ -367,11 +367,13 @@
                 }
             ],
             "proTip":"Take your time with UI element selection. Proper selectors are key to reliable automation.",
-           "tutorialSteps":[
+          "tutorialSteps":[
                 {
                     "stepHeader":"Launch RPA Studio & Create Project",
                     "stepDescription":"Start by opening RPA Studio from your Infor OS tenant. You'll create a new automation project that will serve as the foundation for your form processing bot.",
                     "stepActionHeader":"Specific Actions",
+                    "type":"bullet",
+                    "subListType":"bullet",
                     "stepActions":[
                         {
                             "step":"Click \"New Project\" in RPA Studio",
@@ -404,6 +406,8 @@
                     "stepHeader":"Add Open Browser Activity",
                     "stepDescription":"Your bot needs to navigate to the web form where data will be entered. The Open Browser activity establishes the web session and opens the target URL.",
                     "stepActionHeader":"Configuration Steps",
+                    "type":"numeric",
+                    "subListType":"bullet",
                     "stepActions":[
                         {
                             "step":"Drag \"Open Browser\" from Activities panel to the design canvas",
@@ -434,6 +438,7 @@
                     "stepHeader":"Configure Excel Data Source",
                     "stepDescription":"Your bot needs to read customer data from the provided Excel file. The Read Range activity will extract this data into a format your bot can process.",
                     "stepActionHeader":"Excel Setup",
+                    "type":"numeric",
                     "stepActions":[
                         {
                             "step":"Add \"Read Range\" activity inside the browser scope",
@@ -461,142 +466,6 @@
                             "icon":"📊",
                             "screenshotLabel":"Read Range Activity Setup",
                             "image":"Read Range properties showing workbook path and output variable configuration"
-                    }
-                   ] 
-                },
-                {
-                    "stepHeader":"Create Data Processing Loop",
-                    "stepDescription":"To process multiple customer records, you'll need a loop structure. The For Each Row activity will iterate through each row of your Excel data.",
-                    "stepActionHeader":"Loop Configuration:",
-                    "stepActions":[
-                        {
-                            "step":"Add \"For Each Row\" activity after Read Range",
-                            "list":[]
-                        },
-                        {
-                            "step":"Set DataTable property to \"customerDataTable\"",
-                            "list":[]
-                        },
-                        {
-                            "step":"This creates a \"row\" variable for each iteration",
-                            "list":[]
-                        },
-                        {
-                            "step":"All form filling activities go inside this loop",
-                            "list":[]
-                        }
-                    ],
-                   "stepScreenshots":[
-                    {
-                            "icon":"🔄",
-                            "screenshotLabel":"For Each Row Loop Structure",
-                            "image":"For Each Row activity showing DataTable input and the loop scope ready for form activities"
-                    }
-                   ] 
-                },
-                {
-                    "stepHeader":"Map Form Fields to Data",
-                    "stepDescription":"Now you'll connect your Excel data to the web form fields. Each \"Type Into\" activity will fill a specific form field with data from the current row.",
-                    "stepActionHeader":"Field Mapping",
-                    "stepActions":[
-                        {
-                            "step":"Add \"Type Into\" activity for each form field: ",
-                            "list":[
-                                {
-                                    "li":"First Name: <code>row(\"FirstName\").ToString</code>"
-                                },
-                                {
-                                    "li":"Last Name: <code>row(\"LastName\").ToString</code>"
-                                },
-                                {
-                                    "li":"Email: <code>row(\"Email\").ToString</code>"
-                                },
-                                {
-                                    "li":"Company: <code>row(\"Company\").ToString</code>"
-                                },
-                                {
-                                    "li":"First Name: <code>row(\"FirstName\").ToString</code>"
-                                }
-                            ]
-                        },
-                        {
-                            "step":"Use UI Explorer to select each form field element",
-                            "list":[]
-                        }
-                    ],
-                   "stepScreenshots":[
-                    {
-                            "icon":"⌨️",
-                            "screenshotLabel":"Type Into Activities Configuration",
-                            "image":"Multiple Type Into activities showing field selectors and row data expressions"
-                    }
-                   ] 
-                },
-                {
-                    "stepHeader":"Submit Form and Validate",
-                    "stepDescription":"After filling all fields, submit the form and verify successful submission. This ensures your automation completed correctly for each record.",
-                    "stepActionHeader":"Submission Process",
-                    "stepActions":[
-                        {
-                            "step":"Add \"Click\" activity for the Submit button",
-                            "list":[]
-                        },
-                        {
-                            "step":"Use UI Explorer to select the submit button element",
-                            "list":[]
-                        },
-                        {
-                            "step":"Add \"Find Element\" activity to detect success message",
-                            "list":[]
-                        },
-                        {
-                            "step":"Configure timeout of 10 seconds for success confirmation",
-                            "list":[]
-                        },
-                        {
-                            "step":"Add delay between submissions if processing multiple records",
-                            "list":[]
-                        }
-                    ],
-                   "stepScreenshots":[
-                    {
-                            "icon":"✅",
-                            "screenshotLabel":"Submit and Validation Activities",
-                            "image":"Click activity for submit button and Find Element activity for success message detection"
-                    }
-                   ] 
-                },
-                {
-                    "stepHeader":"Test and Run Your Bot",
-                    "stepDescription":"Execute your completed automation with the test data. Monitor the process to ensure all records are processed correctly and capture your completion code.",
-                    "stepActionHeader":"Testing Steps",
-                    "stepActions":[
-                        {
-                            "step":"Click \"Run\" in RPA Studio to execute your bot",
-                            "list":[]
-                        },
-                        {
-                            "step":"Watch as it processes all 5 test records automatically",
-                            "list":[]
-                        },
-                        {
-                            "step":"Look for the success message after final submission",
-                            "list":[]
-                        },
-                        {
-                            "step":"Copy the completion code that appears (format: INF-XXXX)",
-                            "list":[]
-                        },
-                        {
-                            "step":"This code proves successful automation completion",
-                            "list":[]
-                        }
-                    ],
-                   "stepScreenshots":[
-                    {
-                            "icon":"🚀",
-                            "screenshotLabel":"Bot Execution and Success Code",
-                            "image":"RPA bot running and displaying the final success message with completion code"
                     }
                    ] 
                 }
@@ -686,23 +555,29 @@
                 }
             ],
             "proTip":"Take your time with UI element selection. Proper selectors are key to reliable automation.",
-            "tutorialSteps":[
+          "tutorialSteps":[
                 {
                     "stepHeader":"Launch RPA Studio & Create Project",
                     "stepDescription":"Start by opening RPA Studio from your Infor OS tenant. You'll create a new automation project that will serve as the foundation for your form processing bot.",
                     "stepActionHeader":"Specific Actions",
+                    "type":"bullet",
+                    "subListType":"bullet",
                     "stepActions":[
                         {
-                            "step":"Click \"New Project\" in RPA Studio"
+                            "step":"Click \"New Project\" in RPA Studio",
+                            "list":[]
                         },
                         {
-                            "step":"Name your project \"FormProcessor\""
+                            "step":"Name your project \"FormProcessor\"",
+                            "list":[]
                         },
                         {
-                            "step":"Select \"VB.NET\" as the programming language"
+                            "step":"Select \"VB.NET\" as the programming language",
+                            "list":[]
                         },
                         {
-                            "step":"Choose \"Process\" as the project type"
+                            "step":"Choose \"Process\" as the project type",
+                            "list":[]
                         }
                     ],
                     "stepScreenshots":[
@@ -719,18 +594,24 @@
                     "stepHeader":"Add Open Browser Activity",
                     "stepDescription":"Your bot needs to navigate to the web form where data will be entered. The Open Browser activity establishes the web session and opens the target URL.",
                     "stepActionHeader":"Configuration Steps",
+                    "type":"numeric",
+                    "subListType":"bullet",
                     "stepActions":[
                         {
-                            "step":"Drag \"Open Browser\" from Activities panel to the design canvas"
+                            "step":"Drag \"Open Browser\" from Activities panel to the design canvas",
+                            "list":[]
                         },
                         {
-                            "step":"Set URL property to: https://challenge.infor.com/form1"
+                            "step":"Set URL property to: https://challenge.infor.com/form1",
+                            "list":[]
                         },
                         {
-                            "step":"Choose browser type (Chrome recommended)"
+                            "step":"Choose browser type (Chrome recommended)",
+                            "list":[]
                         },
                         {
-                            "step":"Set BrowserType to \"Chrome\" in properties"
+                            "step":"Set BrowserType to \"Chrome\" in properties",
+                            "list":[]
                         }
                     ],
                    "stepScreenshots":[
@@ -739,10 +620,42 @@
                             "screenshotLabel":"Open Browser Activity Configuration",
                             "image":"path of image"
                     }
-                   ]
-                           
-
-                    
+                   ] 
+                },
+                {
+                    "stepHeader":"Configure Excel Data Source",
+                    "stepDescription":"Your bot needs to read customer data from the provided Excel file. The Read Range activity will extract this data into a format your bot can process.",
+                    "stepActionHeader":"Excel Setup",
+                    "type":"numeric",
+                    "stepActions":[
+                        {
+                            "step":"Add \"Read Range\" activity inside the browser scope",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set Workbook path to the provided customer data file",
+                            "list":[]
+                        },
+                        {
+                            "step":"Configure Sheet name as \"CustomerData\"",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set Range as \"A1\" to read all data starting from headers",
+                            "list":[]
+                        },
+                        {
+                            "step":"Create output variable \"customerDataTable\"",
+                            "list":[]
+                        }
+                    ],
+                   "stepScreenshots":[
+                    {
+                            "icon":"📊",
+                            "screenshotLabel":"Read Range Activity Setup",
+                            "image":"Read Range properties showing workbook path and output variable configuration"
+                    }
+                   ] 
                 }
             ],
             "protipSuccess":[
@@ -804,29 +717,167 @@
                    "description":"Throughout this challenge, you'll master essential RPA concepts including RPA Studio interface and project creation, data extraction from Excel sources, UI element identification and interaction, loop operations for batch processing, and basic error handling and validation."
                 }
                
-            ]
-            
-        },
-        {
-            "id":5,
-            "title": "Document Classification",
-            "badge": "Integration",
-            "cardDescription":" Build an AI model that automatically categorizes incoming documents. Explore machine learning capabilities within the Infor OS platform.",
-            "duration": "~20 minutes",
-            "level": "Level 1",
-            "progress": 90,
-            "color":"#00BD58",
-            "subHeader1":"Challenge Overview",
-            "subHeader2":"What You'll Learn",
-            "subHeader3":"Business Scenario",
-            "subHeader":[
+            ],
+              "requirements":[
                 {
-                  "subTitle":"Challenge Overview",
-                   "description":"In this challenge, you'll create an RPA bot that automates the tedious process of data entry. You'll extract customer information from a structured Excel file and automatically populate a web form, complete with validation and submission. This mirrors real-world scenarios where businesses need to process hundreds of forms efficiently."
+                    "requirement":"Infor OS tenant access"
+                },
+                {
+                    "requirement":"RPA Studio installed"
+                },
+                {
+                    "requirement":"Sample data file (provided)"
+                },
+                {
+                    "requirement":" Practice web form (provided)"
+                }
+            ],
+            "proTip":"Take your time with UI element selection. Proper selectors are key to reliable automation.",
+          "tutorialSteps":[
+                {
+                    "stepHeader":"Launch RPA Studio & Create Project",
+                    "stepDescription":"Start by opening RPA Studio from your Infor OS tenant. You'll create a new automation project that will serve as the foundation for your form processing bot.",
+                    "stepActionHeader":"Specific Actions",
+                    "type":"bullet",
+                    "subListType":"bullet",
+                    "stepActions":[
+                        {
+                            "step":"Click \"New Project\" in RPA Studio",
+                            "list":[]
+                        },
+                        {
+                            "step":"Name your project \"FormProcessor\"",
+                            "list":[]
+                        },
+                        {
+                            "step":"Select \"VB.NET\" as the programming language",
+                            "list":[]
+                        },
+                        {
+                            "step":"Choose \"Process\" as the project type",
+                            "list":[]
+                        }
+                    ],
+                    "stepScreenshots":[
+                        {
+                            "icon":"🖥️",
+                            "screenshotLabel":"RPA Studio Project Creation",
+                            "image":"Screenshot showing the New Project dialog with FormProcessor name and VB.NET selected"
+                        }
+                    ]
+                           
+                        
+                },
+                {
+                    "stepHeader":"Add Open Browser Activity",
+                    "stepDescription":"Your bot needs to navigate to the web form where data will be entered. The Open Browser activity establishes the web session and opens the target URL.",
+                    "stepActionHeader":"Configuration Steps",
+                    "type":"numeric",
+                    "subListType":"bullet",
+                    "stepActions":[
+                        {
+                            "step":"Drag \"Open Browser\" from Activities panel to the design canvas",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set URL property to: https://challenge.infor.com/form1",
+                            "list":[]
+                        },
+                        {
+                            "step":"Choose browser type (Chrome recommended)",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set BrowserType to \"Chrome\" in properties",
+                            "list":[]
+                        }
+                    ],
+                   "stepScreenshots":[
+                    {
+                            "icon":"🌐",
+                            "screenshotLabel":"Open Browser Activity Configuration",
+                            "image":"path of image"
+                    }
+                   ] 
+                },
+                {
+                    "stepHeader":"Configure Excel Data Source",
+                    "stepDescription":"Your bot needs to read customer data from the provided Excel file. The Read Range activity will extract this data into a format your bot can process.",
+                    "stepActionHeader":"Excel Setup",
+                    "type":"numeric",
+                    "stepActions":[
+                        {
+                            "step":"Add \"Read Range\" activity inside the browser scope",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set Workbook path to the provided customer data file",
+                            "list":[]
+                        },
+                        {
+                            "step":"Configure Sheet name as \"CustomerData\"",
+                            "list":[]
+                        },
+                        {
+                            "step":"Set Range as \"A1\" to read all data starting from headers",
+                            "list":[]
+                        },
+                        {
+                            "step":"Create output variable \"customerDataTable\"",
+                            "list":[]
+                        }
+                    ],
+                   "stepScreenshots":[
+                    {
+                            "icon":"📊",
+                            "screenshotLabel":"Read Range Activity Setup",
+                            "image":"Read Range properties showing workbook path and output variable configuration"
+                    }
+                   ] 
+                }
+            ],
+            "protipSuccess":[
+                {
+                    "tip":"<strong>Reliable Selectors:</strong> Use ID or Name attributes when selecting UI elements - they're more stable than position-based selectors."
+                },
+                {
+                    "tip":"<strong>Error Handling:</strong> Add delays between actions if the web form is slow to respond.</p>"
+                },
+                {
+                    "tip":"<strong>Testing:</strong> Test with one record first before processing the full dataset."
+                }
+            ],
+            
+            "challengeValidationMethods":[
+                {
+                    "validationID":1,
+                    "validationMethod":"Completion Code",
+                    "description":"Run your RPA bot with the provided test data. After processing all records, the system will display a unique completion code. Enter that code below to validate your solution.",
+                    "header":"🎯 What to Submit",
+                    "text":"Look for the success message that appears after processing all 5 test records. The message will contain an 8-character code starting with \"INF-\". This code is generated dynamically and proves you completed the automation successfully.",
+                    "label":"Completion Code",
+                    "type":"code",
+                    "apiDetails":[]
                 }
                
+            ],
+             "troubleshootsteps":[
+                {
+                    "step":"<ul><li> Ensure your solution processes all test data completely </li></ul>"
+                },
+                {
+                    "step":"<ul><li> Check that all required activities are included in your project</li> </ul>"
+                },
+                {
+                    "step":"<ul><li> Verify API calls receive successful responses (200 status)</li> </ul>"
+                },
+                {
+                    "step":"<ul><li> File uploads must be valid RPA Studio export files </li></ul>"
+                }
             ]
+            
         }
+       
        
         
 ]

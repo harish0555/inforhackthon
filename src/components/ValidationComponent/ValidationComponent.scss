@@ -338,9 +338,11 @@
 
         /* Modal Styles */
         .modal {
-            position: fixed;
+            position: absolute;
+            // position: fixed;
             top: 0;
             left: 0;
+            // transform: translateX(-50%);
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.8);
